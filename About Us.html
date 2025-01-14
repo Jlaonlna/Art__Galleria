@@ -74,11 +74,14 @@
     </style>
 </head>
 <body>
+    
     <header>
         <div class="logo-container">
             <img src="Art.png" alt="Art Galleria Logo" class="logo">
         </div>
         <nav class="navbar">
+            <div class="hamburger">&#9776;</div>
+            <ul class="nav-list">
             <ul class="nav-list">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="About Us.html">About Us</a></li>
@@ -148,6 +151,20 @@
 
     <footer>
         <p>&copy; 2024 Art Galleria. All rights reserved.</p>
+    </footer>
+
+    <script>
+
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('.nav-list').classList.toggle('show');
+        });
+    
+   
+    </script>
+    
+</body>
+</html>
+
     </footer>
 </body>
 </html>
