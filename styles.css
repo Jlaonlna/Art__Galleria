@@ -305,3 +305,7 @@ footer {
         font-size: 14px; /* Adjust font size for better readability */
     }
 }
+.art-piece img {
+    width: 100%; /* Full width of the container */
+    height: auto; /* Maintain aspect ratio */
+}
