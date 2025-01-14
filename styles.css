@@ -294,3 +294,14 @@ footer {
     }
 }
 
+@media (max-width: 768px) {
+    .calendar-container {
+        width: 100%;
+        overflow-x: auto; /* Allows horizontal scrolling if needed */
+        padding: 10px; /* Add some padding */
+    }
+    .calendar {
+        width: 100%; /* Make sure the calendar takes full width */
+        font-size: 14px; /* Adjust font size for better readability */
+    }
+}
