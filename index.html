@@ -153,6 +153,9 @@
             <img src="Art.png" alt="Art Galleria Logo" class="logo">
         </div>
         <nav class="navbar">
+            <div class="logo-container">
+                <img src="Art.png" alt="Art Galleria Logo" class="logo">
+            </div>
             <ul class="nav-list">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="About Us.html">About Us</a></li>
@@ -211,7 +214,7 @@
              </div>
 
              <div class="art-piece">
-                <img src="pic.6.PNG" alt="Featured Artwork 6">
+                <img src="Pic.6.PNG" alt="Featured Artwork 6">
                 <div class="art-info">
                     <h3>Visual Arts</h3>
                     <p>cecily brown</p>
@@ -229,6 +232,13 @@
      <footer>
          <p>&copy; 2024 Art Galleria. All rights reserved.</p>
      </footer>
+     <script>
+
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('.nav-list').classList.toggle('show');
+        });
+    </script>
+    
 </body>
 </html>
 
