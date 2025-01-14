@@ -36,7 +36,7 @@
         }
         .art-item {
             flex: 0 0 auto;
-            width: 350px;
+            width: 350px; /* Adjust this width for better mobile view */
             background: #ffffff;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -48,7 +48,7 @@
         }
         .art-item img {
             width: 100%;
-            height: 250px;
+            height: auto; /* Change to auto for better aspect ratio */
             object-fit: cover;
         }
         .art-info {
@@ -62,40 +62,18 @@
             color: #060428;
             font-weight: bold;
         }
-        .buy-button, .bid-button {
+        .buy-button {
             display: block;
             width: 100%;
             padding: 10px;
             background-color: #060428;
             color: white;
             text-align: center;
-            text-decoration: none;
-            border: none;
             border-radius: 5px;
             margin-top: 10px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
         }
-        .buy-button:hover, .bid-button:hover {
+        .buy-button:hover {
             background-color: #0a0750;
-        }
-        .auction-timer {
-            font-size: 0.9em;
-            color: #e74c3c;
-            margin-top: 5px;
-        }
-        .art-grid::-webkit-scrollbar {
-            height: 8px;
-        }
-        .art-grid::-webkit-scrollbar-track {
-            background: #f1f1f1;
-        }
-        .art-grid::-webkit-scrollbar-thumb {
-            background: #888;
-            border-radius: 4px;
-        }
-        .art-grid::-webkit-scrollbar-thumb:hover {
-            background: #555;
         }
     </style>
 </head>
@@ -105,9 +83,6 @@
             <img src="Art.png" alt="Art Galleria Logo" class="logo">
         </div>
         <nav class="navbar">
-            <div class="logo-container">
-                <img src="Art.png" alt="Art Galleria Logo" class="logo">
-            </div>
             <ul class="nav-list">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="About Us.html">About Us</a></li>
@@ -125,6 +100,7 @@
             
             <h2>Featured Artworks</h2>
             <div class="art-grid">
+                <!-- Repeat this block for each artwork -->
                 <div class="art-item">
                     <img src="art1.jpg" alt="Abstract Painting">
                     <div class="art-info">
@@ -132,6 +108,10 @@
                         <p class="art-price">$1,200</p>
                         <button class="buy-button">Buy Now</button>
                     </div>
+                </div>
+                <!-- Add more art items here -->
+                <!-- Ensure all image paths are correct -->
+         
                 </div>
                 <div class="art-item">
                     <img src="art2.jpg" alt="Landscape Painting">
@@ -182,7 +162,7 @@
                     </div>
                 </div>
             </div>
-
+       
             <h2>Current Auctions</h2>
             <div class="art-grid">
                 <div class="art-item">
@@ -249,17 +229,17 @@
                     </div>
                 </div>
             </div>
-        </div>
+         </div>
     </main>
 
     <footer>
-        <p>&copy; 2024 Art Galleria. All rights reserved.</p>
+         <p>&copy; 2024 Art Galleria. All rights reserved.</p>
     </footer>
 
     <script>
     document.querySelector('.hamburger').addEventListener('click', function() {
         document.querySelector('.nav-list').classList.toggle('show');
     });
-</script>
+    </script>
 </body>
 </html>
