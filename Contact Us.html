@@ -1,5 +1,4 @@
-
-        <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -94,6 +93,9 @@
             <img src="Art.png" alt="Art Galleria Logo" class="logo">
         </div>
         <nav class="navbar">
+            <div class="logo-container">
+                <img src="Art.png" alt="Art Galleria Logo" class="logo">
+            </div>
             <ul class="nav-list">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="About Us.html">About Us</a></li>
@@ -209,6 +211,10 @@
                 alert("Error: " + error.message);
             });
         });
+
+    document.querySelector('.hamburger').addEventListener('click', function() {
+        document.querySelector('.nav-list').classList.toggle('show');
+    });
     </script>
     
 </body>
