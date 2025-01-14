@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Art Galleria</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        .content {
+            max-width: 1800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .shop-content {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            padding: 40px;
+        }
+        .shop-content h1, .shop-content h2 {
+            color: #060428;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .art-grid {
+            display: flex;
+            overflow-x: auto;
+            gap: 30px;
+            padding-bottom: 20px;
+        }
+        .art-item {
+            flex: 0 0 auto;
+            width: 350px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .art-item:hover {
+            transform: translateY(-5px);
+        }
+        .art-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        .art-info {
+            padding: 15px;
+        }
+        .art-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .art-price {
+            color: #060428;
+            font-weight: bold;
+        }
+        .buy-button, .bid-button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #060428;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .buy-button:hover, .bid-button:hover {
+            background-color: #0a0750;
+        }
+        .auction-timer {
+            font-size: 0.9em;
+            color: #e74c3c;
+            margin-top: 5px;
+        }
+        .art-grid::-webkit-scrollbar {
+            height: 8px;
+        }
+        .art-grid::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        .art-grid::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+        .art-grid::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="Art.png" alt="Art Galleria Logo" class="logo">
+        </div>
+        <nav class="navbar">
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About Us.html">About Us</a></li>
+                <li><a href="Events.html">Events</a></li>
+                <li><a href="Contact Us.html">Contact Us</a></li>
+                <li><a href="Testimonials.html">Testimonials</a></li>
+                <li><a href="Shop.html">Shop</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content">
+        <div class="shop-content">
+            <h1>Art Galleria Shop</h1>
+            
+            <h2>Featured Artworks</h2>
+            <div class="art-grid">
+                <div class="art-item">
+                    <img src="art1.jpg" alt="Abstract Painting">
+                    <div class="art-info">
+                        <p class="art-title">Abstract Harmony</p>
+                        <p class="art-price">$1,200</p>
+                        <button class="buy-button">Buy Now</button>
+                    </div>
+                </div>
+                <div class="art-item">
+                    <img src="art2.jpg" alt="Landscape Painting">
+                    <div class="art-info">
+                        <p class="art-title">Serene Landscape</p>
+                        <p class="art-price">$950</p>
+                        <button class="buy-button">Buy Now</button>
+                    </div>
+                </div>
+                <div class="art-item">
+                    <img src="art3.jpg" alt="Portrait">
+                    <div class="art-info">
+                        <p class="art-title">Artist's Enigmatic Gaze</p>
+                        <p class="art-price">$1,500</p>
+                        <button class="buy-button">Buy Now</button>
+                    </div>
+                </div>
+                <div class="art-item">
+                    <img src="art4.jpg" alt="Modern Sculpture">
+                    <div class="art-info">
+                        <p class="art-title">Modern Sculpture</p>
+                        <p class="art-price">$2,200</p>
+                        <button class="buy-button">Buy Now</button>
+                    </div>
+                </div>
+                <div class="art-item">
+                    <img src="art5.jpg" alt="Colorful Abstract Art">
+                    <div class="art-info">
+                        <p class="art-title">Colorful Abstract Art</p>
+                        <p class="art-price">$800</p>
+                        <button class="buy-button">Buy Now</button>
+                    </div>
+                </div>
+                <div class="art-item">
+                    <img src="art6.jpg" alt="Impressionist Landscape">
+                    <div class="art-info">
+                        <p class="art-title">Sunset Meadows</p>
+                        <p class="art-price">$1,800</p>
+                        <button class="buy-button">Buy Now</button>
+                    </div>
+                </div>
+                <div class="art-item">
+                    <img src="art7.jpg" alt="Contemporary Sculpture">
+                    <div class="art-info">
+                        <p class="art-title">Urban Rhythm</p>
+                        <p class="art-price">$3,500</p>
+                        <button class="buy-button">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Current Auctions</h2>
+            <div class="art-grid">
+                <div class="art-item">
+                    <img src="auction1.jpg" alt="Auction Item 1">
+                    <div class="art-info">
+                        <p class="art-title">Mystical Forest</p>
+                        <p class="art-price">Current Bid: $2,300</p>
+                        <p class="auction-timer">Ends in: 2d 5h 30m</p>
+                        <button class="bid-button">Place Bid</button>
+                    </div>
+                </div>
+                <div class="art-item">
+                    <img src="auction2.jpg" alt="Auction Item 2">
+                    <div class="art-info">
+                        <p class="art-title">Urban Rhythms</p>
+                        <p class="art-price">Current Bid: $1,800</p>
+                        <p class="auction-timer">Ends in: 1d 12h 45m</p>
+                        <button class="bid-button">Place Bid</button>
+                    </div>
+                </div>
+                <div class="art-item">
+                    <img src="auction3.jpg" alt="Auction Item 3">
+                    <div class="art-info">
+                        <p class="art-title">Coastal Dreams</p>
+                        <p class="art-price">Current Bid: $3,100</p>
+                        <p class="auction-timer">Ends in: 4d 8h 15m</p>
+                        <button class="bid-button">Place Bid</button>
+                    </div>
+                </div>
+                <div class="art-item">
+                    <img src="auction4.jpg" alt="Auction Item 4">
+                    <div class="art-info">
+                        <p class="art-title">Abstract Fusion</p>
+                        <p class="art-price">Current Bid: $2,700</p>
+                        <p class="auction-timer">Ends in: 4d 2h 50m</p>
+                        <button class="bid-button">Place Bid</button>
+                    </div>
+                </div>
+                <div class="art-item">
+                    <img src="auction5.jpg" alt="Auction Item 5">
+                    <div class="art-info">
+                        <p class="art-title">Neon Dreams</p>
+                        <p class="art-price">Current Bid: $1,900</p>
+                        <p class="auction-timer">Ends in: 3d 6h 20m</p>
+                        <button class="bid-button">Place Bid</button>
+                    </div>
+                </div>
+                <div class="art-item">
+                    <img src="auction6.jpg" alt="Auction Item 6">
+                    <div class="art-info">
+                        <p class="art-title">Ethereal Whispers</p>
+                        <p class="art-price">Current Bid: $2,500</p>
+                        <p class="auction-timer">Ends in: 2d 18h 45m</p>
+                        <button class="bid-button">Place Bid</button>
+                    </div>
+                </div>
+                <div class="art-item">
+                    <img src="auction7.jpg" alt="Auction Item 7">
+                    <div class="art-info">
+                        <p class="art-title">Quantum Reflections</p>
+                        <p class="art-price">Current Bid: $3,800</p>
+                        <p class="auction-timer">Ends in: 5d 10h 30m</p>
+                        <button class="bid-button">Place Bid</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Art Galleria. All rights reserved.</p>
+    </footer>
+
+    <script>
+       
+    </script>
+</body>
+</html>

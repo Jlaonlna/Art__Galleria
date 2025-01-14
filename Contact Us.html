@@ -1,0 +1,215 @@
+
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Art Galleria</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .contact-container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .contact-info {
+            flex: 1;
+            padding-right: 40px;
+        }
+        .contact-form {
+            flex: 1;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        .contact-form input, .contact-form textarea, .contact-form button {
+            display: block;
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            transition: border-color 0.3s ease;
+        }
+        .contact-form input:focus, .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+        }
+        .contact-form button {
+            background-color: var(--accent-color);
+            color: white;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .contact-form button:hover {
+            background-color: var(--secondary-color);
+        }
+        .contact-methods {
+            margin-top: 30px;
+        }
+        .contact-method {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .contact-method i {
+            font-size: 24px;
+            margin-right: 15px;
+            color: var(--accent-color);
+        }
+        .faq-section {
+            margin-top: 40px;
+        }
+        .faq-item {
+            margin-bottom: 20px;
+        }
+        .faq-question {
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .faq-answer {
+            display: none;
+            margin-top: 10px;
+        }
+        @media (max-width: 768px) {
+            .contact-container {
+                flex-direction: column;
+            }
+            .contact-info, .contact-form {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="Art.png" alt="Art Galleria Logo" class="logo">
+        </div>
+        <nav class="navbar">
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About Us.html">About Us</a></li>
+                <li><a href="Events.html">Events</a></li>
+                <li><a href="Contact Us.html">Contact Us</a></li>
+               <li><a href="Testimonials.html">Testimonials</a></li>
+                <li><a href="Shop.html">Shop</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content">
+        <h1>Contact Us</h1>
+        <p class="intro">We'd love to hear from you! Whether you have a question about our gallery, need support, or just want to chat about art, we're here to help.</p>
+        
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Get in Touch</h2>
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <i class="fas fa-phone"></i>
+                        <p>041234567</p>
+                    </div>
+                    <div class="contact-method">
+                        <i class="fas fa-envelope"></i>
+                        <p>info@artgalleria.com</p>
+                    </div>
+                    <div class="contact-method">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Dubai Mall 3rd floor</p>
+                    </div>
+                </div>
+                
+                <div class="faq-section">
+                    <h3>Frequently Asked Questions [feel free to click the questions to get a response]</h3>
+                    <div class="faq-item">
+                        <p class="faq-question">How can I submit my artwork?</p>
+                        <p class="faq-answer">You can submit your artwork through our online submission form. Visit our 'Artist Submissions' page for more details.</p>
+                    </div>
+                    <div class="faq-item">
+                        <p class="faq-question">Do you offer international shipping?</p>
+                        <p class="faq-answer">Yes, we offer international shipping to most countries. Shipping costs and delivery times vary by location.</p>
+                    </div>
+                </div>
+            <div class="faq-item">
+                <p class="faq-question">Do you offer free parking?</p>
+                <p class="faq-answer">Yes, allocated parking is available for visitors of Art galleria.</p>
+            </div>
+        </div>
+
+            </div>
+            
+            <form id="contactForm" class="contact-form">
+                <h2>Send Us a Message</h2>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Art Galleria. All rights reserved.</p>
+    </footer>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+        import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js";
+    
+        const firebaseConfig = {
+            apiKey: "AIzaSyBMKmhOn_4YF3pKwWhgALPHiAhSnG6b5W4",
+            authDomain: "art-galleria-a17d0.firebaseapp.com",
+            databaseURL: "https://art-galleria-a17d0-default-rtdb.firebaseio.com",
+            projectId: "art-galleria-a17d0",
+            storageBucket: "art-galleria-a17d0.firebasestorage.app",
+            messagingSenderId: "484915708078",
+            appId: "1:484915708078:web:e66672ad68001a5b486d3f",
+            measurementId: "G-98J6LMMTHM"
+        };
+    
+
+    document.querySelectorAll('.faq-question').forEach(question => {
+        question.addEventListener('click', () => {
+            const answer = question.nextElementSibling;
+            answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+        });
+    });
+
+        
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+    
+
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+    
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+    
+ 
+            push(ref(database, "contacts"), {
+                name: name,
+                email: email,
+                message: message
+            })
+            .then(() => {
+                alert("Thank you for submitting your details!");
+                event.target.reset();
+            })
+            .catch((error) => {
+                alert("Error: " + error.message);
+            });
+        });
+    </script>
+    
+</body>
+</html>
