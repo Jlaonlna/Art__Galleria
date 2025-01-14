@@ -266,3 +266,31 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+    }
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: var(--primary-color);
+        padding: 20px 0;
+    }
+    .nav-list.show {
+        display: flex;
+    }
+    .featured-art {
+        flex-direction: column;
+    }
+    .art-piece {
+        width: 100%;
+    }
+}
+
