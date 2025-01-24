@@ -6,6 +6,12 @@
     <title>Events - Art Galleria</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        .content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
         .calendar {
             max-width: 1300px; 
             margin: 20px auto;
@@ -93,32 +99,29 @@
     </style>
 </head>
 <body>
-<header>
-    <div class="logo-container">
-        <img src="Art.png" alt="Art Galleria Logo" class="logo">
-    </div>
-    <nav class="navbar">
-        <div class="hamburger">&#9776;</div>
-        <ul class="nav-list">
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="Art.png" alt="Art Galleria Logo" class="logo">
+            </div>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About Us.html">About Us</a></li>
+                <li><a href="Events.html">Events</a></li>
+                <li><a href="Contact Us.html">Contact Us</a></li>
+                <li><a href="Testimonials.html">Testimonials</a></li>
+                <li><a href="Shop.html">Shop</a></li>
+            </ul>
+        </nav>
+    </header>
 
-            <li><a href="index.html">Home</a></li>
-            <li><a href="About Us.html">About Us</a></li>
-            <li><a href="Events.html">Events</a></li>
-            <li><a href="Contact Us.html">Contact Us</a></li>
-            <li><a href="Testimonials.html">Testimonials</a></li>
-            <li><a href="shop.html">Shop</a></li>
-        </ul>
-    </nav>
-</header>
     <main class="content">
         <h1>Upcoming Events</h1>
         <div class="calendar">
-            <div class="calendar-container">
-    <div class="calendar">
+            <div class="calendar-header">
                 <button id="prevMonth">&lt; Previous</button>
                 <h2 id="currentMonth">December 2024</h2>
                 <button id="nextMonth">Next &gt;</button>
-            </div>
             </div>
             <table>
                 <thead>
@@ -152,7 +155,7 @@
     </div>
 
     <footer>
-        <p>&copy; 2024 Art Galleria. All rights reserved.</p>
+        <p>&copy; 2025 Art Galleria. All rights reserved.</p>
     </footer>
 
     <script>
